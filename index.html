@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Chess Puzzle</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- <h1>PuzzleRating</h1>-->
+
+  <div id="startScene">
+    <h1 id="title">PuzzleRating</h1>
+    <div id="flowContainer">
+      <div class="step" id="step1">
+        <img src="img/bP.png" alt="Pawn">
+        <p>1. Start Diagnostic</p>
+      </div>
+      <div class="step" id="step2">
+        <img src="img/wN.png" alt="Knight">
+        <p>2. Solve Puzzles</p>
+      </div>
+      <div class="step" id="step3">
+        <img src="img/bK.png" alt="King">
+        <p>3. Obtain Rating</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="chessboard" style="display: none;"></div>
+  
+  <!-- <button onclick="resetGame()" style="display: none;">Reset Game</button> -->
+  <!-- <button onclick="finishDiagnostic()" style="display: none;">Finish Diagnostic</button>-->
+  <button onclick="beginDiagnostic()">Begin Diagnostic</button>
+  
+  <button onclick="loadRandomPuzzle()" style="display: none;">Next Puzzle</button>
+  <button id="finishButton" onclick="finishDiagnostic()" style="display: none;">Finish Diagnostic</button>
+
+  <div id="moveResult" style="font-size: 20px; margin-top: 20px; color: #333; display: none;"></div>
+  <div id="moveResult2" style="font-size: 20px; margin-top: 20px; color: #333; display: none;"></div>
+  <div id="toMove" style="font-size: 20px; margin-top: 20px; color: #333; display: none;"></div>
+  <div id="eloChartContainer" >
+    <canvas id="eloChart" style="display: none;"></canvas>
+  </div>
+  <!--<canvas id="eloChart" width="400" height="200" style="display: none;"></canvas>-->
+  <canvas id="sessionChart" style="display: none;"></canvas>
+
+  <table id="resultsTable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Puzzle Info</th>
+            <th>Updated Estimated Elo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dynamic content will be injected here by JavaScript -->
+    </tbody>
+  </table>
+
+  <div id="turnMessage" style="font-size: 18px; margin-top: 10px; color: #555; display: none;"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

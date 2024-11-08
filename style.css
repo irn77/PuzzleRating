@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+#chessboard {
+    width: 400px;
+    margin: 20px auto;
+}
+
+/*
+#eloChart {
+    width: 30px;  /* Adjust width as needed *
+    height: 300px; /* Adjust height as needed *
+  }
+
+  */
+  #eloChartContainer {
+    max-width: 600px;  /* Adjust this value */
+    max-height: 300px; /* Adjust this value */
+    margin: auto;
+}
+
+#eloChart {
+    width: 100%;  /* Set to 100% to respect the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+  #sessionChart {
+    max-width: 100%;
+    height: 400px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+#startScene {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  #title {
+    font-size: 2em;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  #flowContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .step {
+    text-align: center;
+  }
+  
+  .step img {
+    width: 50px; /* Adjust based on desired size */
+    cursor: pointer;
+  }
+  
+  .step p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #555;
+  }
+  
