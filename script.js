@@ -310,7 +310,7 @@ var board = Chessboard('chessboard', {
     draggable: true,
     position: 'start', 
     pieceTheme: function(piece) {
-        return 'img/' + piece + '.png'; 
+        return piece + '.png'; 
     }, onDrop: onDrop
     , onDragStart: onDragStart
 });
