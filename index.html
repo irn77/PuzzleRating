@@ -1,0 +1,127 @@
+<!-- Meta Stuff: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Chess Puzzle</title>
+  <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Body Starts -->
+<body>
+  <div id="startScene">
+    <h1 id="title">PuzzleRating</h1>
+    <div id="flowContainer">
+      <div class="card">
+        <div class="step" id="step1">
+          <img src="icon/brain.png" alt="Pawn">
+          <p>1. Start Diagnostic</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="step" id="step2">
+          <img src="icon/chess.png" alt="Knight">
+          <p>2. Solve Puzzles</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="step" id="step3">
+          <img src="icon/chart.png" alt="King">
+          <p>3. View Results</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- scene 2 stuff starts here -->
+  <h2 id="diagnosticTitle" style="display: none;">Solve, Solve, Solve!</h2>
+  </p>
+  <div id="toMove" style="font-size: 20px; margin-top: 20px; color: #333; display: none;"></div>
+  <div id="moveResult" style="font-size: 20px; margin-top: 20px; color: #333; display: none;"></div>
+  <div id="buttonContainer">
+    <button onclick="loadNextPuzzle()" style="display: none;">Next Puzzle</button>
+    <button id="finishButton" onclick="finishDiagnostic()" style="display: none;">Finish Diagnostic</button>
+  </div>
+  <div id="loadingIndicator" style="display: none;">
+    <div class="loading-circle"></div>
+  </div>
+  <div id="chessboard" style="display: none;"></div>
+  <p id="diagnosticSubtitle" style="font-size: 14px; color: #666; margin-top: 5px; display:none;">
+    Most users achieve <span style="color:green;">"Very High Confidence"</span> at around <span
+      style="color:green;">16-17 puzzles</span>.<br>
+    The more puzzles you solve the merrier!
+  </p>
+  <button class="button-28" role="button" onclick="beginDiagnostic()">START NEW DIAGNOSTIC</button>
+  <button class="button-29" role="button" onclick="learnMore()">LEARN MORE</button>
+  <div id="turnMessage" style="font-size: 18px; margin-top: 10px; color: #555; display: none;"></div>
+  <script src="script.js"></script>
+  <section id="scene2" style="display: none;">
+    <div class="counter-bar-container">
+      <span id="counter">
+        <div id="confidence-text" style="font-size: 16px; ">Very Low Confidence</div>
+        <div id="confidence-text2" style="font-size: 12px;">
+          Your rating deviation is
+          <span style="color: red;">493 points</span>. Solve more to lower it!
+        </div>
+        <span class="current-count">0</span><span class="total-count">/17</span>
+      </span>
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+    <div id="chessboard" style="width: 400px; margin: 20px auto;"></div>
+  </section>
+  <section id="scene3" style="display: none;">
+    <h2 id="resultsTitle">Your Puzzle Results</h2>
+    <div class="stats-card">
+      <div class="card-header">
+        <span class="emoji">&#x1F464;</span>
+        <span class="rating">Rating: XXXX</span>
+      </div>
+      <div class="card-content">
+        <div class="rating-row">Opening Rating: XXXX</div>
+        <div class="rating-row">Middlegame Rating: XXXX</div>
+        <div class="rating-row">Endgame Rating: XXXX</div>
+      </div>
+    </div>
+    <div id="eloChartContainer">
+      <canvas id="eloChart"></canvas>
+    </div>
+    <div id="individualGraphContainer">
+      <canvas id="individualGraph"></canvas>
+    </div>
+    <div id="cumulativeEloChartContainer">
+      <canvas id="cumulativeEloChart"></canvas>
+    </div>
+    <div id="sessionChartContainer">
+      <canvas id="sessionChart"></canvas>
+    </div>
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Puzzle Info</th>
+          <th>Updated Estimated Elo</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div id="reviewPuzzles">
+      <img src="icon/chess.png" alt="Chessboard Emoji" />
+      <span>Want to review your puzzles? Press here for FEN's.</span>
+    </div>
+    <div id="fenModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Puzzle FEN's</h2>
+        <p class="subtitle">Fun Fact: Each puzzle comes from a real game, linked next to the FEN below!</p>
+        <div id="fenList"></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

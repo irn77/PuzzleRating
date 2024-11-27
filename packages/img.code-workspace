@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "img",
+			"path": "../chessboardjs-1.0.0/img"
+		},
+		{
+			"name": "CS109 Project",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

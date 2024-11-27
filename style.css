@@ -1,0 +1,700 @@
+/* css File. Note: there is some overriding elements */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: linear-gradient(to right, #ffffff, #cccccc, #ffffff);
+
+}
+
+#chessboard {
+  width: 400px;
+  margin: 20px auto;
+
+}
+
+#eloChartContainer {
+  max-width: 600px;
+  max-height: 300px;
+  margin: auto;
+}
+
+#eloChart {
+  width: 100%;
+  height: auto;
+ 
+}
+
+#individualGraphContainer {
+  max-width: 600px;
+  max-height: 300px;
+  margin: auto;
+}
+
+#individualGraph {
+  width: 100%;
+ 
+  height: auto;
+ 
+}
+
+#cumulativeEloChartContainer {
+  max-width: 600px;
+
+  max-height: 300px;
+  margin: auto;
+}
+
+#cumulativeEloChart {
+  width: 100%;
+
+  height: auto;
+ 
+}
+
+#sessionChartContainer {
+  max-width: 600px;
+  
+  max-height: 300px;
+ 
+  margin: auto;
+}
+
+#sessionChart {
+  width: 100%;
+ 
+  height: auto;
+ 
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#startScene {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#title {
+  font-size: 2em;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#flowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  gap: 20px;
+ 
+}
+
+.card {
+  background-color: #f9f9f9;
+ 
+  border: 1px solid #ddd;
+ 
+  border-radius: 8px;
+ 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
+  padding: 15px;
+  
+  width: 150px;
+ 
+  margin: 0 10px;
+  
+  transition: transform 0.2s;
+  
+  text-align: center;
+ 
+}
+
+
+.step img {
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.step p {
+  margin-top: 5px;
+  font-size: 1em;
+  color: #555;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+
+}
+
+#beginDiagnostic {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 60%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.button-29 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 60%;
+  will-change: transform;
+}
+
+.button-29:disabled {
+  pointer-events: none;
+}
+
+.button-29:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+
+}
+
+#startScene {
+  text-align: center;
+  padding-top: 80px;
+  
+}
+
+#title {
+  font-size: 2.5em;
+ 
+  font-weight: 600;
+  
+  
+  margin-bottom: 30px;
+ 
+  color: #333;
+}
+
+#flowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  
+  gap: 40px;
+ 
+}
+
+.card {
+  background-color: white;
+  border: none;
+  
+  border-radius: 12px;
+  
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  
+  padding: 25px;
+  
+  width: 200px;
+  
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.step img {
+  width: 80px;
+  margin-bottom: 12px;
+}
+
+.step p {
+  margin-top: 0;
+  font-size: 1.1em;
+  
+  color: #555;
+}
+
+.start-button,
+.info-button {
+  display: block;
+  width: 250px;
+  
+  margin: 20px auto;
+  
+  padding: 15px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #218838;
+}
+
+.info-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.info-button:hover {
+  background-color: #0056b3;
+}
+
+.card:hover {
+  background-color: #f9f9f9;
+}
+
+#counter-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#counter {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.check-mark {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 2em;
+  color: green;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.counter-bar-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.counter {
+  font-size: 2rem;
+  color: #6200ea;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 30px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background-color: red;
+  transition: width 0.2s ease;
+}
+
+.counter {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.current-count {
+  color: red;
+  font-weight: bold;
+}
+
+.total-count {
+  color: #aaa;
+  font-weight: normal;
+}
+
+
+.counter-bar-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  gap: 10px;
+}
+
+.counter {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.current-count {
+  color: red;
+  font-weight: bold;
+}
+
+.total-count {
+  color: #aaa;
+  font-weight: normal;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 30px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: red;
+  transition: width 0.3s ease-in-out;
+  border-radius: 5px 0 0 5px;
+}
+
+
+
+.stats-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.emoji {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.rating {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.rating-row {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.highlight {
+  background-color: lightyellow;
+}
+
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#buttonContainer button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  outline: none;
+  padding: 12px 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+#buttonContainer button:disabled {
+  pointer-events: none;
+}
+
+#buttonContainer button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#buttonContainer button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.custom-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#modal-cancel {
+  background-color: #ccc;
+}
+
+#modal-proceed {
+  background-color: #6200ea;
+ 
+  color: #fff;
+}
+
+.solved-highlight {
+  background-color: #baf5ba;
+  
+}
+
+.failed-highlight {
+  background-color: hsl(0, 91%, 87%);
+  
+}
+
+#reviewPuzzles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#reviewPuzzles img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  text-align: left;
+
+}
+
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#fenModal #fenList p {
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+#fenModal .modal-content h2 {
+  margin-bottom: 0px;
+}
+
+#fenModal .subtitle {
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+#loadingIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.loading-circle {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
