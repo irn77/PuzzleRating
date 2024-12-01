@@ -34,8 +34,8 @@ let puzzleFenOverTime = [];
 let puzzleUrls = [];
 
 
-//
-document.querySelector("button[onclick='learnMore()']").style.display = "none"; // for now
+
+document.querySelector("button[onclick='learnMore()']").style.display = "none"; // for now, until write-up ready
 
 // Called when the diagnostic is finished. 
 // Does a lot of things: Closes/hides elements not needed
@@ -960,7 +960,7 @@ function analyzeEloDifferences(eloDifferences, label) {
     return [label, mean, median, q1, q3, min, max];
 }
 
-// Helper Function: Calculates the Standard Deviation of a given distribution {CHECK CALC}
+// Helper Function: Calculates the Standard Deviation of a given distribution 
 function calculateStandardDeviation(labels, distribution) {
     const expectedElo = calculateExpectedElo(labels, distribution);
     // variance:
