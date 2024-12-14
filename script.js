@@ -767,7 +767,7 @@ function beginDiagnostic() {
     loadNextPuzzle();
 }
 
-// Opens up the write-up for this project for interested indivuals
+// Opens up the write-up for this project for interested individuals
 function learnMore() {
     window.open("TechnicalPaper.pdf", "_blank");
 }
