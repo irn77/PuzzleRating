@@ -35,7 +35,6 @@ let puzzleUrls = [];
 
 
 
-document.querySelector("button[onclick='learnMore()']").style.display = "none"; // for now, until write-up ready
 
 // Called when the diagnostic is finished. 
 // Does a lot of things: Closes/hides elements not needed
