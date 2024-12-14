@@ -769,7 +769,7 @@ function beginDiagnostic() {
 
 // Opens up the write-up for this project for interested indivuals
 function learnMore() {
-    //window.open("CompSci.pdf", "_blank");
+    window.open("TechnicalPaper.pdf", "_blank");
 }
 
 // Helper function: Called after each puzzle, updates all information below the chess board
